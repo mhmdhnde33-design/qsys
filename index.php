@@ -8,7 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#16581a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/assets/icon-192.png">
+
+    <link rel="manifest" href="/manifest.json">
 
     <style>
         .gradient-bg {
@@ -206,7 +210,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
+                navigator.serviceWorker.register('/sw.js')
                     .then((registration) => {
                         console.log('PWA ServiceWorker registered successfully with scope: ', registration.scope);
                     })
